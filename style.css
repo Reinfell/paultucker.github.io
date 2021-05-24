@@ -1,0 +1,30 @@
+html,body{
+    background-color: white;
+}
+.skills-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 4em;
+}
+.skill-child {
+    text-align: center;
+    font-size: 4rem;
+}
+.skill-child p{
+    font-size: 1.5rem;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.contact-content{
+    font-size: 4rem;
+    text-align: center;
+
+}
+.contact-content p {
+    font-size: 1.5rem;
+}
