@@ -1,19 +1,96 @@
+*{
+    font-family: consolas;
+}
 html,body{
-    background-color: white;
+    background-color: rgb(71, 71, 71);
 }
 .skills-container{
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     font-size: 4em;
 }
-.skill-child {
-    text-align: center;
-    font-size: 4rem;
+.skills-container .card{
+    position: relative;
+    width: 325px;
+    padding: 20px;
+    margin: 20px;
+    background: #c0b3b3;
 }
-.skill-child p{
-    font-size: 1.5rem;
+.skills-container .card::before{
+    content:'';
+    position: absolute;
+    top:0;
+    right:0;
+    border: 20px solid transparent;
+    border-top: 20px solid orange;
+    border-right: 20px solid orange;
+}
+.skills-container .card.active::before{
+    border-top: 20px solid rgb(0, 214, 0);
+    border-right: 20px solid rgb(0, 214, 0);
+}
+.skills-container .card .icon{
+    margin-bottom: 10px;
+}
+.skills-container .card .icon i{
+    max-width: 90px;
+}
+.skills-container .card .content{
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+}
+.skills-container .card.active .content{
+    height: auto;
+
+}
+.skills-container .card .content h3{
+    color: black;
+    font-size: 0.6em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills-container .card .content p{
+    font-weight: 300;
+    font-size: 0.3em;
+    color: black;
+}
+.skills-container .card .content::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #c0b3b3);
+}
+.skills-container .card.active .content::before{
+    display: none;
+}
+.skills-container .card .more{
+    position: relative;
+    padding: 10px 10px;
+    background: orange;
+    margin-top: 15px;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.3em;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+.skills-container .card.active .more{
+    background: rgb(0, 214, 0);
+}
+.skills-container .card .more::before{
+    content: 'Read More';
+}
+.skills-container .card.active .more::before{
+    content: 'Read Less';
 }
 .contact-container{
     display: flex;
@@ -23,7 +100,6 @@ html,body{
 .contact-content{
     font-size: 4rem;
     text-align: center;
-
 }
 .contact-content p {
     font-size: 1.5rem;

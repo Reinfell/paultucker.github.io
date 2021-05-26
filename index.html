@@ -50,39 +50,62 @@
 
         <div class="jumbotron jumbotron-fluid" id="languages">
             <div class="container">
-              <h1 class="display-4">Languages</h1>
-              <p class="lead">My knowledge of the languages below is completely self-taught, mostly utilising courses avaliable online most specifically those that are offered on Codecademy.</p>
+                <h1 class="display-4">Languages</h1>
+                <p class="lead">My knowledge of the languages below is completely self-taught, mostly utilising courses avaliable online most specifically those that are offered on Codecademy.</p>
                 <div class="skills-container">
-                    <div class="skill-child">
-                        <i class="fab fa-html5"></i>
-                        <p><b>HTML5</b></p>
-                        <p>Competent</p>
+                    <div class="card">
+                        <i class="fab fa-html5" id="icon"></i>
+                        <div class="content">
+                            <h3>HTML5</h3>
+                            <p>I understand HTML Syntax to a competent level, whilst linking HTML files to both external CSS and JS files. I understand the key principles of web design and wireframing to achieve an endproduct, whilst understanding the concepts of accessibility within web design to make a site as user and device friendly as possible.</p>
+                        </div>
+                        <a class="more"></a>
                     </div>
-                    <div class="skill-child">
-                        <i class="fab fa-css3-alt"></i>
-                        <p><b>CSS3</b></p>
-                        <p>Competent</p>
+                    <div class="card">
+                        <i class="fab fa-css3-alt" id="icon"></i>
+                        <div class="content">
+                            <h3>CSS3</h3>
+                            <p>I understand CSS syntax to a competent level, including class and id targetting. Key principles of both Grid and FlexBox, whilst being able to utilise CSS Animation for transitions.</p>
+                        </div>
+                        <a class="more"></a>
                     </div>
-                    <div class="skill-child">
-                        <i class="fab fa-js"></i>
-                        <p><b>JavaScript</b></p>
-                        <p>Competent</p>
+                    <div class="card">
+                        <i class="fab fa-js" id="icon"></i>
+                        <div class="content">
+                            <h3>JavaScript</h3>
+                            <p>I understand JavaScript syntax to a competent level. I am able to both utilise internal and external JavaScript within webpages and understand key concepts such as Functions, Arrays, Objects, Iterators, Classes and Modules. As well as utilising script to identify and debug potential issues in code.</p>
+                        </div>
+                        <a class="more"></a>
                     </div>
-                    <div class="skill-child">
-                        <i class="fab fa-react"></i>
-                        <p><b>React</b></p>
-                        <p>Basic</p>
+                    <div class="card">
+                        <i class="fab fa-react" id="icon"></i>
+                        <div class="content">
+                            <h3>React</h3>
+                            <p>I understand React's JSX syntax to a basic level. I understand the key concepts of React, utilising components and props with and without states. As well as understanding the basics of function components and hooks.</p>
+                        </div>
+                        <a class="more"></a>
                     </div>
-                    <div class="skill-child">
-                        <i class="fab fa-github"></i>
-                        <p><b>GitHub</b></p>
-                        <p>Competent</p>
+                    <div class="card">
+                        <i class="fab fa-github" id="icon"></i>
+                        <div class="content">
+                            <h3>GitHub</h3>
+                            <p>I am competent at utilising GitHub as a collaborative workspace, both by access via GitHub Desktop's GUI and GitBash - Utilising command line access to browse, create and upload local files to a collaborative directory.</p>
+                        </div>
+                        <a class="more"></a>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            let more = document.querySelectorAll('.more');
+            for (let i = 0; i < more.length; i++){
+                more[i].addEventListener('click', function(){
+                    more[i].parentNode.classList.toggle('active')
+                })
+            }
+        </script>
 
-        <div class="jumbotron jumbotron-fluid" id="about-me">
+        <div class="jumbotron jumbotron-fluid" id="courses">
             <div class="container">
               <h1 class="display-4">Courses</h1>
               <p class="lead">I've both enrolled in and completed a variety of courses avaliable online, below is an example of those:</p>
