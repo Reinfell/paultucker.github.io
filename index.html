@@ -109,13 +109,45 @@
             <div class="container">
               <h1 class="display-4">Courses</h1>
               <p class="lead">I've both enrolled in and completed a variety of courses avaliable online, below is an example of those:</p>
-              <p class="lead"><b>Codecademy</b> - 'Learn HTML' - <i>Completed</i></p>
-              <p class="lead"><b>Codecademy</b> - 'Learn CSS' - <i>Completed</i></p>
-              <p class="lead"><b>Codecademy</b> - 'Learn JavaScript' - <i>Completed</i></p>
-              <p class="lead"><b>Codecademy</b> - 'Learn React' - <i>Completed</i></p>
-              <p class="lead"><b>Codecademy</b> - 'Full Stack Engineer - Career Path' - <i>Ongoing</i></p>
+              <button type="button" class="collapsible">Codecademy - 'Learn HTML'</button>
+              <div class="courses-content">
+                  <p>Enrolled and completed the 'Learn HTML' course offered by Codecademy, giving me an understanding of HTML Syntax and the fundamentals of web design.</p>
+              </div>
+              <button type="button" class="collapsible">Codecademy - 'Learn CSS'</button>
+              <div class="courses-content">
+                  <p>Enrolled and completed the 'Learn CSS' course offered by Codecademy, this course allowed me to understand how powerful CSS can be when designing webpages and gave me an insight into concepts such as Grid Design and the utilisation of FlexBox.</p>
+              </div>
+              <button type="button" class="collapsible">Codecademy - 'Learn JavaScript'</button>
+              <div class="courses-content">
+                  <p>Enrolled and completed the 'Learn JavaScript' course offered by Codecademy. This course enabled me to get to grips with JS Syntax and how to implement certain concepts both within web design and external applications.</p>
+              </div>
+              <button type="button" class="collapsible">Codecademy - 'Learn React'</button>
+              <div class="courses-content">
+                  <p>Enrolled and completed the 'Learn React' course offered by Codecademy. The course for this JavaScript library gave me an insight in how the library is used to create responsive user-interfaces.</p>
+              </div>
+              <button type="button" class="collapsible">Codecademy - 'Full Stack Engineer - Career Path'</button>
+              <div class="courses-content">
+                  <p>I am currently enrolled and committed to the Codecademy 'Full Stack Engineer - Career Path' in which the four languages listed above are part of as well as adding React Redux to my stack. This course also teaches me how to use collaborative workspaces such as GitHub and how to access them utilising GitHub Desktop and GitBash (Command Line). Further on in the course, the fundamentals of back-end design utilising Node.js and Express.js as well as the design of databases using SQL (PostgreSQL). In addition the course highlights the use of OAuth and Passport.js within the package as well.</p>
+              </div>
             </div>
         </div>
+
+        <script>
+            var collapse = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < collapse.length; i++) {
+              collapse[i].addEventListener("click", function() {
+                this.classList.toggle("coursesActive");
+                var coursesContent = this.nextElementSibling;
+                if (coursesContent.style.maxHeight){
+                  coursesContent.style.maxHeight = null;
+                } else {
+                  coursesContent.style.maxHeight = coursesContent.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
 
         <div class="jumbotron jumbotron-fluid" id="contact">
             <div class="container">
